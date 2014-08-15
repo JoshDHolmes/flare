@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+.<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -19,6 +19,7 @@
     <!-- JavaScript -->
     <script src="js/contacts.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/tabs.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +29,7 @@
     <![endif]-->
   </head>
   <body>
-<div class="container">
+    <div class="container">
 
       <!-- Static navbar -->
       <div class="navbar navbar-default" role="navigation">
@@ -59,264 +60,500 @@
         <strong>Uh-oh!</strong> You appear to have forgotten something.
       </div>
 
-    <div class="jumbotron">
+      <div class="jumbotron">
         <h1>Welcome</h1>
         <p>This webform will store your customer's data within a secured, encrypted database.</p>
         <p><a href="/crm/about" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
       </div>
 
-    <div class="page-header">
-        <h2>Business Details</h2>
-      </div>
-      <div class="form-horizontal" role="form">
-  <div class="form-group">
-    <label for="inputBusName" class="col-sm-2 control-label">Business Name</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputBusName" placeholder="Business Name">
-    </div>
-    <span class="label label-danger">Required Field</span>
-  </div>
-  <div class="form-group">
-    <label for="inputBusCat" class="col-sm-2 control-label">Business Category</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputBusCat">
-        <option>Sole Trader</option>
-        <option>Partnership</option>
-        <option>Trustee</option>
-        <option>Limited</option>
-        <option>Proprietary Limited</option>
-        </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputBusDescrip" class="col-sm-2 control-label">Business Description</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputBusDescrip" placeholder="e.g. Real Estate, Restaurant">
-    </div>
-    <span class="label label-danger">Required Field</span>
-  </div>
-  <div class="form-group">
-    <label for="inputEmployees" class="col-sm-2 control-label">Number of Employees</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputEmployees" placeholder="Approx. number of employees">
-    </div>
-    <span class="label label-danger">Required Field</span>
-  </div>
-  <div class="form-group">
-    <label for="inputOpTime" class="col-sm-2 control-label">Time Operating</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputOpTime">
-        <option>Less than 6 months</option>
-        <option>Less than 2 years</option>
-        <option>Less than 5 years</option>
-        <option>More than 5 years</option>
-        </select>
-    </div>
-  </div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#home" role="tab" data-toggle="tab">Business Purchase</a></li>
+        <li><a href="#businessEnq" role="tab" data-toggle="tab">Business Enquiry</a></li>
+        <li><a href="#consumer" role="tab" data-toggle="tab">Consumer Purchase</a></li>
+        <li><a href="#preorder" role="tab" data-toggle="tab">Device Preorder</a></li>
+      </ul>
 
-  <div class="page-header">
-        <h2>Contact Details</h2>
-      </div>
-  <div class="form-group">
-    <label for="inputContactName" class="col-sm-2 control-label">Contact Name</label>
-    <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputContactName" placeholder="Contact Name or Authorised Rep">
-    </div>
-    <span class="label label-danger">Required Field</span>
-  </div>
-  <div class="form-group">
-    <label for="inputContactPhone" class="col-sm-2 control-label">Contact Phone Number</label>
-    <div class="col-sm-4">
-      <input type="number" class="form-control" id="inputContactPhone" placeholder="Contact Phone Number">
-    </div>
-    <span class="label label-danger">Required Field</span>
-    <span class="label label-warning">Whoops! That needs to be a phone number</span>
-  </div>
-  <div class="form-group">
-    <label for="inputContactEmail" class="col-sm-2 control-label">Contact Email</label>
-    <div class="col-sm-4">
-      <input type="email" class="form-control" id="inputContactEmail" placeholder="Contact Email Address">
-    </div>
-    <span class="label label-danger">Required Field</span>
-    <span class="label label-warning">Whoops! That needs to be an email address</span>
-  </div>
-  <div class="form-group">
-    <label for="inputContactFax" class="col-sm-2 control-label">Contact Fax Number</label>
-    <div class="col-sm-4">
-      <input type="number" class="form-control" id="inputContactFax" placeholder="Contact Fax Number">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputContactMeth" class="col-sm-2 control-label">Preferred Method</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputContactMeth">
-        <option>Phone</option>
-        <option>Email</option>
-        </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputMarketing" class="col-sm-2 control-label">Marketing</label>
-    <div class="col-sm-4">
-  <div class="checkbox">
-  <label>
-    <input type="checkbox" value="" id="inputMarketing">
-    Can we contact you for marketing purposes?
-  </label>
-</div>
-</div>
-</div>
- <!-- <form class="form-group" role="form">
-    <label for="inputContType" class="col-sm-2 control-label">Contact Methods</label>
-    <div class="col-sm-4">
-                    <div class="form-group multiple-form-group input-group">
-                        <div class="input-group-btn input-group-select">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                <span class="concept">Phone</span> <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#phone">Phone</a></li>
-                                <li><a href="#fax">Fax</a></li>
-                                <li><a href="#skype">Skype</a></li>
-                                <li><a href="#email">E-mail</a></li>
-                                <li><a href="#www">Web</a></li>
-                            </ul>
-                            <input type="hidden" class="input-group-select-val" name="contacts['type'][]" value="phone">
-                        </div>
-                        <input type="text" name="contacts['value'][]" class="form-control">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-success btn-add">+</button>
-                        </span>
-                    </div>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+
+          <div class="page-header">
+            <h2>Business Details</h2>
           </div>
-        </div> -->
+          
+          <div class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="inputBusName" class="col-sm-2 control-label">Business Name</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputBusName" placeholder="Business Name">
+                </div>
+                <span class="label label-danger">Required Field</span>
+            </div>
+  
+            <div class="form-group">
+              <label for="inputBusCat" class="col-sm-2 control-label">Business Category</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputBusCat">
+                    <option>Sole Trader</option>
+                    <option>Partnership</option>
+                    <option>Trustee</option>
+                    <option>Limited</option>
+                    <option>Proprietary Limited</option>
+                    </select>
+                </div>
+            </div>
 
-  <div class="page-header">
-        <h2>Purchase Details</h2>
+            <div class="form-group">
+              <label for="inputBusDescrip" class="col-sm-2 control-label">Business Description</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputBusDescrip" placeholder="e.g. Real Estate, Restaurant">
+                </div>
+                <span class="label label-danger">Required Field</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputEmployees" class="col-sm-2 control-label">Number of Employees</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputEmployees" placeholder="Approx. number of employees">
+                </div>
+                <span class="label label-danger">Required Field</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputOpTime" class="col-sm-2 control-label">Time Operating</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputOpTime">
+                    <option>Less than 6 months</option>
+                    <option>Less than 2 years</option>
+                    <option>Less than 5 years</option>
+                    <option>More than 5 years</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="page-header">
+              <h2>Contact Details</h2>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactName" class="col-sm-2 control-label">Contact Name</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputContactName" placeholder="Contact Name or Authorised Rep">
+                </div>
+                <span class="label label-danger">Required Field</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactPhone" class="col-sm-2 control-label">Contact Phone Number</label>
+                <div class="col-sm-4">
+                  <input type="number" class="form-control" id="inputContactPhone" placeholder="Contact Phone Number">
+                </div>
+                <span class="label label-danger">Required Field</span>
+                <span class="label label-warning">Whoops! That needs to be a phone number</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactEmail" class="col-sm-2 control-label">Contact Email</label>
+                <div class="col-sm-4">
+                  <input type="email" class="form-control" id="inputContactEmail" placeholder="Contact Email Address">
+                </div>
+                <span class="label label-danger">Required Field</span>
+                <span class="label label-warning">Whoops! That needs to be an email address</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactFax" class="col-sm-2 control-label">Contact Fax Number</label>
+                <div class="col-sm-4">
+                  <input type="number" class="form-control" id="inputContactFax" placeholder="Contact Fax Number">
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactMeth" class="col-sm-2 control-label">Preferred Method</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputContactMeth">
+                    <option>Phone</option>
+                    <option>Email</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputMarketing" class="col-sm-2 control-label">Marketing</label>
+                <div class="col-sm-4">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="" id="inputMarketing">Can we contact you for marketing purposes?</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="page-header">
+              <h2>Purchase Details</h2>
+            </div>
+            <div class="form-group">
+              <label for="inputContractLine" class="col-sm-2 control-label">Contract Line</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputContractLine">
+                    <option>BigPond Wireless</option>
+                    <option>BigPond Fixed Line</option>
+                    <option>Telstra Wireless</option>
+                    <option>Business Voice</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContractLength" class="col-sm-2 control-label">Contract Length</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputContractLength">
+                    <option>Casual</option>
+                    <option>12 Month</option>
+                    <option>24 Month</option>
+                    <option>36 Month</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContractAmt" class="col-sm-2 control-label">Contract Price</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputContractAmt">
+                    <option>$10</option>
+                    <option>$35</option>
+                    <option>$55</option>
+                    <option>$85</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContract" class="col-sm-2 control-label">Contract Type</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputContract">
+                    <option>$40 Easy Business (SIM Only)</option>
+                    <option>$45 Easy Business</option>
+                    <option>$55 Easy Business</option>
+                    <option>$80 Easy Business</option>
+                    <option>$105 Easy Business</option>
+                    <option>$55 Easy Share Business (SIM Only)</option>
+                    <option>$65 Easy Share Business</option>
+                    <option>$80 Easy Share Business (SIM Only)</option>
+                    <option>$85 Easy Share Business</option>
+                    <option>$100 Easy Share Business</option>
+                    <option>$105 Easy Share Business (SIM Only)</option>
+                    <option>$135 Easy Share Business</option>
+                    <option>$10 Business Fleet Connect</option>
+                    <option>$35 Business Fleet Connect</option>
+                    <option>$45 Business Fleet Connect</option>
+                    <option>$75 Business Fleet Connect</option>
+                    <option>$90 Business Fleet Connect</option>
+                    <option>$95 Business Fleet Connect</option>
+                    <option>$105 Business Fleet Connect</option>
+                    <option>$140 Business Fleet Connect</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputDevice" class="col-sm-2 control-label">Device</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputDevice">
+                    <option>Apple iPhone 4S 8GB</option>
+                    <option>Apple iPhone 4S 16GB</option>
+                    <option>Apple iPhone 4S 32GB</option>
+                    <option>Apple iPhone 5C 16GB</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputNewPF" class="col-sm-2 control-label">New Phone Feeling</label>
+                <div class="col-sm-4">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="" id="inputNewPF">Was New Phone Feeling included?</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="page-header">
+              <h2>Extra Details</h2>
+            </div>
+
+            <div class="form-group">
+              <label for="inputStaffMember" class="col-sm-2 control-label">Staff Member</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputStaffMember">
+                    <option>Joshua</option>
+                    <option>Nick</option>
+                    <option>Alana</option>
+                    <option>Justin</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputNotes" class="col-sm-2 control-label">Notes</label>
+                <div class="col-sm-4">
+                  <textarea class="form-control" rows="3" id="inputNotes"></textarea>
+                </div>
+            </div>
+
+            <div class="page-header">
+              <h2>All Done?</h2>
+            </div>
+
+            <p><a href="#" class="btn btn-success btn-lg" role="button">Submit Form</a>
+            <a href="#" class="btn btn-primary btn-lg" role="button">Reset Form</a></p>
+          
+          </div>
+        </div>
+
+        <!-- Tabs Begin Again -->
+
+        <div class="tab-pane fade" id="businessEnq">
+          <div class="container">
+            <div class="page-header">
+            <h2>Business Details</h2>
+          </div>
+          
+          <div class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="inputBusName" class="col-sm-2 control-label">Business Name</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputBusName" placeholder="Business Name">
+                </div>
+                <span class="label label-danger">Required Field</span>
+            </div>
+  
+            <div class="form-group">
+              <label for="inputBusCat" class="col-sm-2 control-label">Business Category</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputBusCat">
+                    <option>Sole Trader</option>
+                    <option>Partnership</option>
+                    <option>Trustee</option>
+                    <option>Limited</option>
+                    <option>Proprietary Limited</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputBusDescrip" class="col-sm-2 control-label">Business Description</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputBusDescrip" placeholder="e.g. Real Estate, Restaurant">
+                </div>
+                <span class="label label-danger">Required Field</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputEmployees" class="col-sm-2 control-label">Number of Employees</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputEmployees" placeholder="Approx. number of employees">
+                </div>
+                <span class="label label-danger">Required Field</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputOpTime" class="col-sm-2 control-label">Time Operating</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputOpTime">
+                    <option>Less than 6 months</option>
+                    <option>Less than 2 years</option>
+                    <option>Less than 5 years</option>
+                    <option>More than 5 years</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="page-header">
+              <h2>Contact Details</h2>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactName" class="col-sm-2 control-label">Contact Name</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputContactName" placeholder="Contact Name or Authorised Rep">
+                </div>
+                <span class="label label-danger">Required Field</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactPhone" class="col-sm-2 control-label">Contact Phone Number</label>
+                <div class="col-sm-4">
+                  <input type="number" class="form-control" id="inputContactPhone" placeholder="Contact Phone Number">
+                </div>
+                <span class="label label-danger">Required Field</span>
+                <span class="label label-warning">Whoops! That needs to be a phone number</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactEmail" class="col-sm-2 control-label">Contact Email</label>
+                <div class="col-sm-4">
+                  <input type="email" class="form-control" id="inputContactEmail" placeholder="Contact Email Address">
+                </div>
+                <span class="label label-danger">Required Field</span>
+                <span class="label label-warning">Whoops! That needs to be an email address</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactFax" class="col-sm-2 control-label">Contact Fax Number</label>
+                <div class="col-sm-4">
+                  <input type="number" class="form-control" id="inputContactFax" placeholder="Contact Fax Number">
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputContactMeth" class="col-sm-2 control-label">Preferred Method</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputContactMeth">
+                    <option>Phone</option>
+                    <option>Email</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputMarketing" class="col-sm-2 control-label">Marketing</label>
+                <div class="col-sm-4">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" value="" id="inputMarketing">Can we contact you for marketing purposes?</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="page-header">
+              <h2>Enquiry Details</h2>
+            </div>
+
+            <div class="form-group">
+              <label for="inputNotes" class="col-sm-2 control-label">Notes</label>
+                <div class="col-sm-4">
+                  <textarea class="form-control" rows="3" id="inputNotes"></textarea>
+                </div>
+            </div>
+
+            <div class="page-header">
+              <h2>Staff Details</h2>
+            </div>
+
+            <div class="form-group">
+              <label for="inputStaffMember" class="col-sm-2 control-label">Staff Member</label>
+                <div class="col-sm-4">
+                  <select class="form-control" id="inputStaffMember">
+                    <option>Joshua</option>
+                    <option>Nick</option>
+                    <option>Alana</option>
+                    <option>Justin</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="page-header">
+              <h2>All Done?</h2>
+            </div>
+
+            <p><a href="#" class="btn btn-success btn-lg" role="button">Submit Form</a>
+            <a href="#" class="btn btn-primary btn-lg" role="button">Reset Form</a></p>
+
+          </div>
+        </div>
       </div>
-       <div class="form-group">
-    <label for="inputContractLine" class="col-sm-2 control-label">Contract Line</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputContractLine">
-        <option>BigPond Wireless</option>
-        <option>BigPond Fixed Line</option>
-        <option>Telstra Wireless</option>
-        <option>Business Voice</option>
-        </select>
-    </div>
-  </div>
-      <div class="form-group">
-    <label for="inputContractLength" class="col-sm-2 control-label">Contract Length</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputContractLength">
-        <option>Casual</option>
-        <option>12 Month</option>
-        <option>24 Month</option>
-        <option>36 Month</option>
-        </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputContractAmt" class="col-sm-2 control-label">Contract Price</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputContractAmt">
-        <option>$10</option>
-        <option>$35</option>
-        <option>$55</option>
-        <option>$85</option>
-        </select>
-    </div>
-  </div>
-      <div class="form-group">
-    <label for="inputContract" class="col-sm-2 control-label">Contract Type</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputContract">
-        <option>$40 Easy Business (SIM Only)</option>
-        <option>$45 Easy Business</option>
-        <option>$55 Easy Business</option>
-        <option>$80 Easy Business</option>
-        <option>$105 Easy Business</option>
-        <option>$55 Easy Share Business (SIM Only)</option>
-        <option>$65 Easy Share Business</option>
-        <option>$80 Easy Share Business (SIM Only)</option>
-        <option>$85 Easy Share Business</option>
-        <option>$100 Easy Share Business</option>
-        <option>$105 Easy Share Business (SIM Only)</option>
-        <option>$135 Easy Share Business</option>
-        <option>$10 Business Fleet Connect</option>
-        <option>$35 Business Fleet Connect</option>
-        <option>$45 Business Fleet Connect</option>
-        <option>$75 Business Fleet Connect</option>
-        <option>$90 Business Fleet Connect</option>
-        <option>$95 Business Fleet Connect</option>
-        <option>$105 Business Fleet Connect</option>
-        <option>$140 Business Fleet Connect</option>
-        </select>
-    </div>
-  </div>
+          
+        <div class="tab-pane fade" id="consumer">
+          <div class="container">
+            <p class="lead bg-primary" style="margin:30px; padding:10px;">Hmmm, this section doesn't look ready yet.</p>
+          </div>          
+        </div>
 
-    <div class="form-group">
-    <label for="inputDevice" class="col-sm-2 control-label">Device</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputDevice">
-        <option>Apple iPhone 4S 8GB</option>
-        <option>Apple iPhone 4S 16GB</option>
-        <option>Apple iPhone 4S 32GB</option>
-        <option>Apple iPhone 5C 16GB</option>
-        </select>
-    </div>
-  </div>
+        <div class="tab-pane fade" id="preorder">
+            <div class="container">
+                <p class="bg-warning" style="margin:30px; padding:10px;">Details for devices on preorder cannot be confirmed until an official announcement.</p>
+                <div class="form-horizontal" role="form">
+                    <div class="page-header">
+                        <h2>Details</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCustName" class="col-sm-2 control-label">Customer Name</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="inputCustName" placeholder="Customer Name">
+                            </div>
+                            <span class="label label-danger">Required Field</span>
+                    </div>
+                
+                    <div class="form-group">    
+                        <label for="inputCustNo" class="col-sm-2 control-label">Phone Number</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="inputCustNo" placeholder="Customer Number">
+                        </div>
+                        <span class="label label-danger">Required Field</span>
+                    </div>
+  
+                    <div class="form-group">
+                        <label for="inputModel" class="col-sm-2 control-label">Preorder Device</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="inputModel">
+                                <option>Apple iPhone 6</option>
+                                <option>Samsung Galaxy Alpha</option>
+                                <option>OnePlus One</option>
+                            </select>
+                        </div>
+                    </div>
 
-  <div class="form-group">
-    <label for="inputNewPF" class="col-sm-2 control-label">New Phone Feeling</label>
-    <div class="col-sm-4">
-  <div class="checkbox">
-  <label>
-    <input type="checkbox" value="" id="inputNewPF">
-    Was New Phone Feeling included?
-  </label>
-</div>
-</div>
+                    <div class="form-group">
+                        <label for="inputDetails" class="col-sm-2 control-label">Device Details</label>
+                        <div class="col-sm-4">
+                            <textarea class="form-control" rows="3" id="inputDetails">e.g. Colour, screen size, storage size</textarea>
+                        </div>
+                        <span class="label label-danger">Required Field</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputStaffMember" class="col-sm-2 control-label">Staff Member</label>
+                        <div class="col-sm-4">
+                          <select class="form-control" id="inputStaffMember">
+                            <option>Joshua</option>
+                            <option>Nick</option>
+                            <option>Alana</option>
+                            <option>Justin</option>
+                          </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputContact" class="col-sm-2 control-label">Contact</label>
+                        <div class="col-sm-4">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" id="inputContact">Would you like us to contact you even if we can't get what you have specified?</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="page-header">
+                        <h2>Submit</h2>
+                    </div>
+                    
+                <p><a href="#" class="btn btn-success btn-lg" role="button">Submit Form</a>
+                <a href="#" class="btn btn-primary btn-lg" role="button">Reset Form</a></p>
+                </div>         
+            </div>
+        </div>
 
-  <div class="page-header">
-        <h2>Extra Details</h2>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
       </div>
-
-      <div class="form-group">
-    <label for="inputStaffMember" class="col-sm-2 control-label">Staff Member</label>
-    <div class="col-sm-4">
-      <select class="form-control" id="inputStaffMember">
-        <option>Joshua</option>
-        <option>Nick</option>
-        <option>Alana</option>
-        <option>Justin</option>
-        </select>
-    </div>
-  </div>
-      <div class="form-group">
-    <label for="inputNotes" class="col-sm-2 control-label">Notes</label>
-    <div class="col-sm-4">
-      <textarea class="form-control" rows="3" id="inputNotes"></textarea>
-    </div>
-  </div>
-
-    <div class="page-header">
-        <h2>All Done?</h2>
-      </div>
-
-      <p><a href="#" class="btn btn-success btn-lg" role="button">Submit Form</a>
-      <a href="#" class="btn btn-primary btn-lg" role="button">Reset Form</a></p>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </div>
-</div>
-  </body>
-  <div class="mastfoot">
+  
+    </body>
+    
+    <div class="mastfoot">
       <div class="inner">
           <p>Created by Joshua Holmes and Thomas Shaw &copy 2014</p>
       </div>
-  </div>
-</html>
+    </div>
+  </html>
